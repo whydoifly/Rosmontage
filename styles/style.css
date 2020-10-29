@@ -320,7 +320,7 @@ hr.light-100 {
     padding: 1.2rem;
   }
 
-  #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; bottom: 6px; right: 6px; }
+  #back-to-top-btn { font-size: 18px; width: 60px; height: 60px; bottom: 6px; right: 6px; }
 
   .house-plan {
 	  display: none;
