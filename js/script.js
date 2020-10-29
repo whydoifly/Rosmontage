@@ -1,6 +1,6 @@
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 50,
     loop: true,
     pagination: {
       el: '.swiper-pagination',
@@ -140,6 +140,5 @@ $(document).ready(function() {
 			}, 1000);
 		});
 		return false;
-  });
+  });  
 });
-
