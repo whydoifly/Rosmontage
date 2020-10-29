@@ -79,24 +79,26 @@ $(function() {
     basePrice = 30000,
     design = 0;
     finalPrice = 900000,
+    countBtn = $('#countBtn'),
     
   mCount.change(function() {
     if ($(this).val() > 20) {
       $(this).tooltip('dispose');
       finalPrice = (+mCount.val() * basePrice) * +floorNumber.val() * +typeOfHouse + design;
-      price.text(finalPrice);
+      
+      // price.text(finalPrice);
     } else {
       $(this).tooltip('toggle');
     }
   });
   floorNumber.change(function(event) {
       var finalPrice = (+mCount.val() * basePrice) * +floorNumber.val() * +typeOfHouse + design;
-      price.text(finalPrice);
+      // price.text(finalPrice);
   });
   $('input[name="typeOfHouse"]').change(function(event) {
       typeOfHouse = $(this).val();
       finalPrice = (+mCount.val() * basePrice) * +floorNumber.val() * +typeOfHouse + design;
-      price.text(finalPrice);
+      // price.text(finalPrice);
       // Change image on other option
       /* if ($(this).val() == 1) {
         $('img').attr('src', 'img/wooden_house.jpg');
@@ -115,8 +117,21 @@ $(function() {
       price.text(finalPrice);
     }
   })
+  $("#countBtn").click(function() {
+    finalPrice = (+mCount.val() * basePrice) * +floorNumber.val() * +typeOfHouse + design;
+    price.text(finalPrice);
+    $("#price").each(function() {
+      var $this = $(this);
+      jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+        duration: 1000,
+        easing: 'swing',
+        step: function () {
+          $this.text(Math.ceil(this.Counter));
+        }
+      });
+    })
+  })
 });
-
 
 
 
