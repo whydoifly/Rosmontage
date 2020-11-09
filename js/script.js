@@ -157,3 +157,26 @@ $(document).ready(function() {
 		return false;
   });  
 });
+
+// Gallery 
+
+var galleryBtn = document.getElementsByClassName("btn");
+var galleryImage = document.getElementById("gallery-image");
+
+var images = new Array(
+  "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1PaZiB5_nQPI4CrJv3Bd8G-hl6EOaHPQJ",
+  "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=16udbcv8q_JftjykpB1aEdDHvU3HvWXHT",
+  "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1CSWK44cT5T6VRWkhA-ny4Oq2NIN1Qv8S",
+  "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=101xufGeQiCtAYA2XFwOdnDoUL-Sj3u8G",
+  "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1ahTgzm1-YRKOwheUlTMS6KfjAhTVMf2F",
+  "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=1PXmjIYH0BkQX0PDLqttU4mSECPMWZPf5"
+);
+
+for(let i = 0; i < galleryBtn.length; i++) {
+  galleryBtn[i].onclick = function() {
+    galleryImage.src = images[i];
+    let currentImage = document.getElementsByClassName("active");
+    currentImage[0].className = currentImage[0].className.replace("active", "");
+    this.className += " active";
+  }
+}

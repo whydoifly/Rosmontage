@@ -7,6 +7,8 @@ body {
   font-family: "Nunito", sans-serif;
   color: #212121;
   scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
 }
 
 h1,
@@ -119,6 +121,59 @@ strong {
 .advantages li {
   margin-top: 25px;
   border-bottom: 1px dotted grey;
+}
+
+/* Our Works */
+.gallery-box {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 150px;
+}
+
+.gallery-box img {
+  width: 100%;
+  border: 10px solid rgba(25, 135, 255, 0.2);
+  box-sizing: border-box;
+}
+
+.gallery-box ul {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery-box ul li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+}
+
+.gallery-box .active {
+  color: #0088cc;
+  transform: translateX(-5px);
+  transition: 0.5s;
+}
+
+.gallery-box ul li::after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  left: -5px;
+}
+
+.gallery-box .active::after {
+  background: #0088cc;
+  transition: 1.5s;
 }
 
 /* Calculator */
