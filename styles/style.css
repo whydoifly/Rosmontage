@@ -208,6 +208,10 @@ border: none;
 }
 
 /* Calculator */
+.calc-container {
+  margin-top: 75px;
+}
+
 .form-container-calc {
 	border: 1px solid #bdbdbd;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -221,7 +225,7 @@ border: none;
 .calc-block {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
+  text-align: center;
 }
 
 .price-btn {
